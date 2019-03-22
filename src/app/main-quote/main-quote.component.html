@@ -1,1 +1,22 @@
-
+<div class = "container" id="quoteframe">
+        <div class = "row">
+          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+        <div class="row">
+            <app-quote-details></app-quote-details>
+            <div *ngFor='let quote of quotes'>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Quote
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>{{quote.thequote}}</p>
+                        <footer class="blockquote-footer">{{quote.author}} and posted by<cite title="Source Title">{{quote.publisher}} on {{quote.postDate}}</cite></footer>
+                      </blockquote>
+                    </div>
+                  </div>   
+        </div>
+        </div>
+    </div>
+    

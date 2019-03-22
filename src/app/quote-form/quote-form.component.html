@@ -1,24 +1,31 @@
-<form id ="myform" #quoteform ='ngForm'>
+<form id ="myform" (ngSubmit)='submitQuote()' #quoteform ='ngForm'>
     <div class="form-group">
         <label for="myquote" class="list-group-item list-group-item-secondary">Quote</label>
         <div class="list-group-item">
-            <textarea class="form-control" id="myquote" rows="4" placeholder = "type your quote here" [(ngModel)]="newQuote.quote" name="quote" required></textarea>
+            <textarea class="form-control" id="myquote" rows="4" placeholder = "type your quote here" [(ngModel)]="newQuote.thequote" name="quote" #quote = "ngModel" required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                    <p> Quote is Required</p>
+                    
+                </div>
         </div>
         <div class="list-group-item list-group-item-secondary">
            <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-6">
                   <label for="author">Author</label>
-                  <input class="form-control" rows="1" [(ngModel)]="newQuote.author" name="author" required>
+                  <input class="form-control" rows="1" [(ngModel)]="newQuote.author" name="author" #author = "ngModel" required>
+                  <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                        <p> Author's name is Required</p>
+                        
+                    </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-6">
                   <label for="publisher">Publisher</label>
                   <input class="form-control" rows="1" [(ngModel)]="newQuote.publisher" name="publisher"
-                  required>
-               </div>
-               <div class="col-md-4">
-                  <label for="date">date posted</label>
-                  <input type='date' id="complete" [(ngModel)]="newQuote.postDate" name="postDate"
-                  required>
+                  #publisher = "ngModel" required>
+                  <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                        <p> Your name is Required</p>
+                        
+                    </div>
                </div>
            </div>
         </div>
