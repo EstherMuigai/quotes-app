@@ -2,3 +2,13 @@
     margin-top: 3%;
     margin-left: 20%;
 }
+
+.quote-container {
+    display: flex;
+  flex-wrap: wrap;
+}
+
+.quotecard {
+    margin-top: 3%;
+    margin-left: 3%;
+}

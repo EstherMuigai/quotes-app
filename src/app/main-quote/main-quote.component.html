@@ -2,21 +2,39 @@
         <div class = "row">
           <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
-        <div class="row">
             <app-quote-details></app-quote-details>
+            <div class="card" style="width: 18rem;" class="quotecard">
+              <div class="card-header">
+                  Quote
+                  <button><i class="fas fa-kiss-wink-heart" style="font-size:15px;"></i></button>
+                  <button><i class="fas fa-frown" style="font-size:15px;"></i></button>
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>“I want to apologize to all the women I have called beautiful 
+                    Before I’ve called them intelligent or brave… 
+                    From now on I will say things like 
+                    You are resilient, or you are extraordinary 
+                    Not because I don’t think you’re beautiful 
+                    But because I need you to know 
+                    You are more than that.” </p>
+                  <footer class="blockquote-footer">Author: —Rupi Kaur, Milk and Honey and posted by<cite title="Source Title">Maryanne on Saturday, March 23rd, 2018, 2:24:13 pM</cite></footer>
+                </blockquote>
+              </div>
+            </div> 
             <div *ngFor='let quote of quotes'>
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;" class="quotecard">
                     <div class="card-header">
                         Quote
+                        <button><i class="fas fa-kiss-wink-heart" style="font-size: 7px;"></i></button>
+                        <button><i class="fas fa-frown" style="font-size: 7px;"></i></button>
                     </div>
                     <div class="card-body">
                       <blockquote class="blockquote mb-0">
                         <p>{{quote.thequote}}</p>
-                        <footer class="blockquote-footer">{{quote.author}} and posted by<cite title="Source Title">{{quote.publisher}} on {{quote.postDate}}</cite></footer>
+                        <footer class="blockquote-footer">Author: {{quote.author}} and posted by<cite title="Source Title">{{quote.publisher}} on {{quote.postDate}}</cite></footer>
                       </blockquote>
                     </div>
-                  </div>   
-        </div>
-        </div>
-    </div>
+                  </div>  
+                </div>
     
