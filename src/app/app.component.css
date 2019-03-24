@@ -1,21 +1,19 @@
-.wrapper {
-    max-height: 1000px;
-    overflow: hidden;
+#site {
+    height: 1000px;
+    overflow-y: hidden;
+    background-color: white;
+    opacity:0.8;
+    background-image: url(http://www.hdwallpaperslife.com/wp-content/uploads/2018/01/color_splash_huawei_7s_stock-wide.jpg);
+    color:white;
 }
+
 #mynav {
-      background-color: blueviolet;
       font-family: 'Germania One', cursive;
+      color:white;
 }
 
 #title {
     font-size: 50px;
-}
-
-.nav>li {
-    display: inline-block;
-}
-.nav-list {
-    margin-left: 20%;
 }
 
 .container {
