@@ -1,33 +1,35 @@
-<div class = "container">
-        <div class = "row" id="quoteframe">
+<div class = "container-fluid" id="hold">
+      <div class = "row" id="quoteframe">
           <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
             <app-quote-details></app-quote-details>
-            <div *ngFor='let quote of quotes' id="quote1">
-                <div class="card" style="width: 18rem;" class="quotecard">
-                    <div class="card-header">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>{{quote.publisher}}</p>
-                          </div>
-                          <div class="col-md-6" class="emoji">
-                            <ul class="list-group flex-md-row">
-                              <li class="list-inline"><i class="fas fa-heart" style="font-size: 20px; color: #f172a1;"></i><a href="#"></a></li>
-                              <li class="list-inline">{{quote.voteup}}</li>
-                              <li class="list-inline"><i class="fas fa-thumbs-down" style="font-size: 20px; color:black;"></i><a href="#"></a></li>
-                              <li class="list-inline">{{quote.votedown}}</li>
-                            </ul>
-                          </div>
+            <div class="parent">
+                <div *ngFor='let quote of quotes' id="quote1">
+                    <div class="card" class="quotecard">
+                        <div class="card-header">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>{{quote.publisher}}</p>
+                              </div>
+                              <div class="col-md-6" class="emoji" ng-init="count=0">
+                                <ul class="list-group flex-md-row">
+                                  <li class="list-inline"><i class="fas fa-heart" style="font-size: 20px; color: #f172a1;"></i><a href="#"></a></li>
+                                  <li class="list-inline">{{quote.voteUp}}</li>
+                                  <li class="list-inline"><i class="fas fa-thumbs-down" style="font-size: 20px; color:black;"></i><a href="#"></a></li>
+                                  <li class="list-inline">{{quote.votedown}}</li>
+                                </ul>
+                              </div>
+                            </div>
+                            <p>{{quote.postDate}}</p>
                         </div>
-                        <p>{{quote.postDate}}</p>
-                    </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>{{quote.thequote}}</p>
-                        <footer class="blockquote-footer">Author: {{quote.author}}<cite title="Source Title"></cite></footer>
-                      </blockquote>
-                    </div>
-                  </div>  
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p>{{quote.thequote}}</p>
+                            <footer class="blockquote-footer">Author: {{quote.author}}<cite title="Source Title"></cite></footer>
+                          </blockquote>
+                        </div>
+                      </div>  
+                </div>
             </div>
 </div>
     

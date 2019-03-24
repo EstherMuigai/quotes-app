@@ -1,10 +1,10 @@
 #site {
-    height: 1000px;
     overflow-y: hidden;
     background-color: white;
     opacity:0.8;
     background-image: url(http://www.hdwallpaperslife.com/wp-content/uploads/2018/01/color_splash_huawei_7s_stock-wide.jpg);
     color:white;
+    background-attachment: fixed;
 }
 
 #mynav {
@@ -16,8 +16,20 @@
     font-size: 50px;
 }
 
+#logo {
+    position:fixed;
+    margin-left: 0;
+}
+
+#navbarText {
+    margin-left: 15%;
+    margin-top: 1%;
+}
+
+
 .container {
-    margin-left: 20%;
+    margin-left:0;
+    margin-right: 0;
     margin-top: 5%;
 }
 
@@ -28,6 +40,7 @@ app-quote-form {
 a {
     color: black;
     font-size: 20px;
+    background-image: url(https://lh3.googleusercontent.com/bVKyq4rgsOl2Z-0DwNFURFb_qmiWVSzJ_j2o3EWbTYdmrbAUwxlF65pD8CbcgWDX412MUsKsAw=s328-no);
 }
 
 input {

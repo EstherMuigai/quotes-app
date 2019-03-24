@@ -1,6 +1,15 @@
 <form id ="myform" (ngSubmit)='submitQuote()' #quoteform ='ngForm'>
     <div class="form-group">
-        <label for="myquote" class="list-group-item" id="header">What's on your mind?</label>
+        <div class="list-group-item" id="header">
+            <div class="row">
+                    <div class="col-md-6">
+                        <label for="myquote">What's on your mind?</label>
+                    </div>
+                    <div class="col-md-6" style="margin-right:0%;">
+                        <button type="submit" class="btn btn-outline-info" >Post</button>
+                    </div>
+            </div>
+        </div>
         <div class="list-group-item" id="main">
             <textarea class="form-control" id="myquote" rows="4" placeholder = "type your quote here" [(ngModel)]="newQuote.thequote" name="quote" #quote = "ngModel" required></textarea>
         </div>
