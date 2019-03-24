@@ -1,11 +1,11 @@
 #quoteframe {
-    margin-top: 3%;
     margin-left: 25%;
 }
 
 .quotecard {
     border: solid;
     border-color: #8860d0;
+    border-top: 1px;
     border-radius: 10px;
     padding: 0;
 }
@@ -30,8 +30,12 @@ i {
     margin-left: 3%;
 }
 
+#more {
+    display: none;
+}
+
 #hold {
-    margin-top: 3%;
+    margin-top: 10%;
 }
 
 .card-header {
@@ -42,13 +46,13 @@ i {
     -moz-column-count: 4;
     -webkit-column-count: 4;
     column-count: 4;
-    -moz-column-gap: 17rem;
-    -webkit-column-gap: 17rem;
+    -moz-column-gap: 18rem;
+    -webkit-column-gap: 18rem;
     column-gap: 10px;
 }
 
 #quote1 {
-    width:17rem;
+    width:18rem;
     margin: 5px 0;
     display: inline-block;
     box-sizing: border-box;

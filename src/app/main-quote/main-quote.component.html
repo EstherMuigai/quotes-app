@@ -4,31 +4,35 @@
         </div>
             <app-quote-details></app-quote-details>
             <div class="parent">
-                <div *ngFor='let quote of quotes' id="quote1">
+                <div *ngFor='let quote of quotes' id="quote1" >
                     <div class="card" class="quotecard">
                         <div class="card-header">
                             <div class="row">
                               <div class="col-md-6">
                                 <p>{{quote.publisher}}</p>
+                                <p style="font-size: 14px; margin-top:3%;">posted {{quote.postDate|dateCount}} weeks ago</p>
                               </div>
                               <div class="col-md-6" class="emoji" ng-init="count=0">
                                 <ul class="list-group flex-md-row">
                                   <li class="list-inline"><i class="fas fa-heart" style="font-size: 20px; color: #f172a1;"></i><a href="#"></a></li>
-                                  <li class="list-inline">{{quote.voteUp}}</li>
+                                  <li class="list-inline">{{quote.voteup}}</li>
                                   <li class="list-inline"><i class="fas fa-thumbs-down" style="font-size: 20px; color:black;"></i><a href="#"></a></li>
                                   <li class="list-inline">{{quote.votedown}}</li>
                                 </ul>
                               </div>
                             </div>
-                            <p>{{quote.postDate}}</p>
+                            <div style="font-size: 10px;">
+                                <p>{{quote.postDate}}</p>
+                            </div>
                         </div>
                         <div class="card-body">
                           <blockquote class="blockquote mb-0">
                             <p>{{quote.thequote}}</p>
-                            <footer class="blockquote-footer">Author: {{quote.author}}<cite title="Source Title"></cite></footer>
+                            <footer class="blockquote-footer" style="color:black;">Author: {{quote.author}}<cite title="Source Title"></cite></footer>
+                            <button type="submit" class="btn btn-outline-info" style="margin-left:5%;" (click) = 'quoteDelete(true)'>Delete</button>
                           </blockquote>
                         </div>
-                      </div>  
+                      </div>
                 </div>
             </div>
 </div>
