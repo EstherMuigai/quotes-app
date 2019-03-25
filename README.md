@@ -1,6 +1,19 @@
 # QuoteApp
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5. It incorporates lessons learnt in creating classes, components and directives in Angular and how to install and deploy Angular apps. This project is a culmination of all I have learnt in my first week learning Angular. The project was uploaded on 25/03/2019.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+| Behaviour                       | Input Example                    | Output Example  				                 |
+| ------------------------------- |:--------------------------------:| --------------------------------------: |
+| 			                          | 			                           | 						 		                         |
+| GIVEN user is on the site page  | WHEN they refresh page	         | THEN a they have a view of all quotes and how to upload                            |
+| 			                          | 			                           | 						 		                         |
+| GIVEN user sees inputs a quote 	| WHEN they click submit          | THEN this quote appears in the quote collection                        |
+| 			          | 			             | 						 		 | 
+| GIVEN user views a quote      | WHEN they click to see more details     | THEN the day the quote was posted appears with an option to delete quote                      |
+| 			          | 			             | 						 		 |
+| GIVEN user wants to vote       | WHEN they click on emoticon             | THEN their vote goes up                          | 
+| 			          | 			             | 						 		 |
+| GIVEN user is wants to higlight a quote       | WHEN they click on it              | THEN quote background is highlighted					 |
+| 			          | 			             | 						 		 |
 
 ## Development server
 
