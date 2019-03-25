@@ -7,20 +7,27 @@
     <div *ngFor='let quote of quotes; let i=index' id="quote1">
       <div class="card" class="quotecard">
         <div class="card-header">
-          <div class="row">
-            <div class="col-md-6">
-              <p>{{quote.publisher}}</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>{{quote.publisher}}</p>
+                  </div>
+                  <div class="col-md-6" class="emoji" ng-init="count=0">
+                    <p>{{quote.postDate|dateCount}} weeks ago</p>
+                  </div>
             </div>
-            <div class="col-md-6" class="emoji" ng-init="count=0">
-              <ul class="list-group flex-md-row">
-                <i class="fas fa-heart" (click)=voteup(quote) style="font-size: 20px; color: #f172a1;"></i>
-                <li class="list-inline">{{quote.voteup}}</li>
-                <i class="fas fa-thumbs-down" (click)=votedown(quote) style="font-size: 20px; color:black;"></i>
-                <li class="list-inline">{{quote.votedown}}</li>
-              </ul>
-            </div>
-            <a (click)='toggleDetails(i)' id="toggler">more details...</a>
-          </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <a (click)='toggleDetails(i)' id="toggler">more details...</a>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group flex-md-row">
+                            <i class="fas fa-heart" (click)=voteup(quote) style="font-size: 20px; color: #f172a1;"></i>
+                            <li class="list-inline">{{quote.voteup}}</li>
+                            <i class="fas fa-thumbs-down" (click)=votedown(quote) style="font-size: 20px; color:black;"></i>
+                            <li class="list-inline">{{quote.votedown}}</li>
+                          </ul>
+                    </div>
+              </div>
         </div>
         <div class="card-body" appHighlightQuote>
           <blockquote class="blockquote mb-0">
