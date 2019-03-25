@@ -1,5 +1,6 @@
 #sub {
-    margin-top: 6%;
+    margin-top: -1%;
+    margin-left: 13px;
 }
 
 .list-group-item {
@@ -8,10 +9,15 @@
 
 textarea {
     background: rgba(0, 0, 0, 0);
+    height: 50px;
 }
 
 input {
     background: rgba(0, 0, 0, 0);
+    height: 30px;
+    width: 200px;
+    margin-right: 9px;
+    margin-left: 15px;
 }
 
 #header {
@@ -21,6 +27,7 @@ input {
     border-left: 5px solid #8860d0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 600px;
 }
 
 #foot {
@@ -34,8 +41,10 @@ input {
 }
 
 #main {
+    height:2%;
     border-top:0;
     border-bottom:0;
     border-right: 5px solid #8860d0;
     border-left: 5px solid #8860d0;
+    
 }

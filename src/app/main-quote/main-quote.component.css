@@ -6,6 +6,7 @@
     border: solid;
     border-color: #8860d0;
     border-top: 1px;
+    border-bottom: 1px;
     border-radius: 10px;
     padding: 0;
 }
@@ -20,6 +21,10 @@ li:hover i:before {
 
 .emoji {
     margin-left: 10%;
+}
+
+#delete{
+    float:right;
 }
 
 .fas:hover {
@@ -52,6 +57,8 @@ i {
 }
 
 #quote1 {
+    padding: 3px;
+    border-radius:10px;
     width:18rem;
     margin: 5px 0;
     display: inline-block;

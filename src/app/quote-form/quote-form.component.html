@@ -5,23 +5,18 @@
                     <div class="col-md-6">
                         <label for="myquote">What's on your mind?</label>
                     </div>
-                    <div class="col-md-6" style="margin-right:0%;">
-                        <button type="submit" class="btn btn-outline-info" >Post</button>
-                    </div>
             </div>
         </div>
         <div class="list-group-item" id="main">
-            <textarea class="form-control" id="myquote" rows="4" placeholder = "type your quote here" [(ngModel)]="newQuote.thequote" name="quote" #quote = "ngModel" required></textarea>
+            <textarea class="form-control" id="myquote" rows="4" placeholder = "Type your quote here" [(ngModel)]="newQuote.thequote" name="quote" #quote = "ngModel" required></textarea>
         </div>
         <div class="list-group-item" id="foot">
            <div class="row" id="submitters">
               <div class="col-md-4" class="me">
-                  <label for="author">Author</label>
-                  <input class="form-control" rows="1" [(ngModel)]="newQuote.author" name="author" #author = "ngModel" required>
+                  <input class="form-control" placeholder="Author" rows="1" [(ngModel)]="newQuote.author" name="author" #author = "ngModel" required>
                </div>
                <div class="col-md-4" class="me">
-                  <label for="publisher">Publisher</label>
-                  <input class="form-control" rows="1" [(ngModel)]="newQuote.publisher" name="publisher"
+                  <input class="form-control" placeholder="Publisher"rows="1" [(ngModel)]="newQuote.publisher" name="publisher"
                   #publisher = "ngModel" required>
                </div>
                <div class="col-md-4" id="sub" class="me">

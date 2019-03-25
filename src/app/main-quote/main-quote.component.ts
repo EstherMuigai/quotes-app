@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter,Input} from '@angular/core';
+import { Component, OnInit, Output,EventEmitter} from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -19,10 +19,22 @@ export class MainQuoteComponent implements OnInit {
     new Quote (40, 8, "Books to the ceiling, Books to the sky, My pile of books is a mile high. How I love them! How I need them! I'll have a long beard by the time I read them", "Arnold Lobel", "Chris Leisbeit", new Date(2019,1,14,3,35,40) ),
   ]
 
-  addNewQuote(quote){
-    let dateFormat = require('dateformat');
-    quote.postDate = dateFormat("dddd, mmmm dS, yyyy, h:MM:ss");
-    this.quotes.push(quote);
+  votes = []
+
+addNewQuote(object:Quote){
+    let dateFormat = require('dateformat')
+    object.postDate = dateFormat("dddd, mmmm dS, yyyy, h:MM:ss")
+    this.quotes.push(object)
+    this.votes.push(object.voteup)
+}
+
+
+voteup(object:Quote) {
+  object.voteup+=1
+}
+
+votedown(object:Quote) {
+  object.votedown+=1
 }
 
 quoteDelete(complete:boolean){
