@@ -2,7 +2,6 @@
   <div class="row" id="quoteframe">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-  <app-quote-details></app-quote-details>
   <div class="parent">
     <div *ngFor='let quote of quotes; let i=index' id="quote1">
       <div class="card" class="quotecard">
