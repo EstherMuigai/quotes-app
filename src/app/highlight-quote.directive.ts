@@ -1,4 +1,5 @@
-import { Directive, ElementRef,HostListener} from '@angular/core';
+import { Directive, ElementRef} from '@angular/core';
+import { Quote } from './quote';
 
 @Directive({
   selector: '[appHighlightQuote]'
@@ -7,12 +8,12 @@ export class HighlightQuoteDirective {
 
   constructor(private elem:ElementRef){}
 
-  @HostListener("click") onClicks(){
-    this.highlightMe('linear-gradient(to right, #e8aed7,#f27dd0, #e8aed7,#f27dd0,#e8aed7)')
-  }
-
-  @HostListener("dblclick") onDoubleClicks(){
-    this.highlightMe("None")
+  votes = []
+  HighlightQuote(object:Quote) {
+    this.votes.push(object.voteup)
+    if (object.voteup=Math.max(...this.votes)) {
+      this.highlightMe('linear-gradient(to right, #e8aed7,#f27dd0, #e8aed7,#f27dd0,#e8aed7)')
+    }
   }
 
   private highlightMe (action:string){

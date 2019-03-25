@@ -6,7 +6,6 @@
     border: solid;
     border-color: #8860d0;
     border-top: 1px;
-    border-bottom: 1px;
     border-radius: 10px;
     padding: 0;
 }
@@ -23,12 +22,17 @@ li:hover i:before {
     margin-left: 10%;
 }
 
-#delete{
-    float:right;
-}
-
 .fas:hover {
     font-size: 30px;
+}
+
+#toggler {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+#toggler:hover{
+    text-decoration: underline;
 }
 
 i {

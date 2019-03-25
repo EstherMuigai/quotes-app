@@ -19,13 +19,11 @@ export class MainQuoteComponent implements OnInit {
     new Quote (40, 8, "Books to the ceiling, Books to the sky, My pile of books is a mile high. How I love them! How I need them! I'll have a long beard by the time I read them", "Arnold Lobel", "Chris Leisbeit", new Date(2019,1,14,3,35,40) ),
   ]
 
-  votes = []
 
 addNewQuote(object:Quote){
     let dateFormat = require('dateformat')
     object.postDate = dateFormat("dddd, mmmm dS, yyyy, h:MM:ss")
     this.quotes.push(object)
-    this.votes.push(object.voteup)
 }
 
 
@@ -39,6 +37,10 @@ votedown(object:Quote) {
 
 quoteDelete(complete:boolean){
   this.isComplete.emit(complete);
+}
+
+toggleDetails(index){
+  this.quotes[index].showDetails = !this.quotes[index].showDetails;
 }
 
 deleteQuote(isComplete,index){

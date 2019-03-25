@@ -1,0 +1,15 @@
+#delete{
+    float:right;
+}
+
+.fas:hover {
+    font-size: 30px;
+}
+
+i {
+    margin-left: 3%;
+}
+
+.card-header {
+    background-image: linear-gradient(to right, #8860d0, #5ab9ea, #38cce2,#8860d0);
+}

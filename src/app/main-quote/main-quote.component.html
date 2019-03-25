@@ -19,6 +19,7 @@
                 <li class="list-inline">{{quote.votedown}}</li>
               </ul>
             </div>
+            <a (click)='toggleDetails(i)' id="toggler">more details...</a>
           </div>
         </div>
         <div class="card-body" appHighlightQuote>
@@ -28,16 +29,7 @@
                 title="Source Title"></cite></footer>
           </blockquote>
         </div>
-        <div class="card-header" style="height:70px;">
-            <div class ="row" style="margin-top:0;">
-                <div class="col-md-8" style="margin-top:0;">
-                    <p style="font-size:12px;">{{quote.postDate}}</p>
-                  </div>
-                  <div class="col-md-4" style="margin-top:10px;">
-                      <i class="fas fa-trash-alt" id="delete"></i>
-                  </div>
-            </div>
-        </div>
+        <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
       </div>
     </div>
   </div>
